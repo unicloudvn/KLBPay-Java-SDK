@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+vn.unicloud.sdk.payment.config.PaymentConfigurationProperties, \
+vn.unicloud.sdk.payment.client.RestTemplateConfig, \
+vn.unicloud.sdk.payment.client.ThirdPartyClient, \
+vn.unicloud.sdk.payment.KPayClient
