@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'vn.unicloud.sdk'
-version = '0.0.3-SNAPSHOT'
+version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
 configurations {
@@ -36,4 +36,24 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+publishing {
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://github.com/unicloudvn/KLBPay-Java-SDK.git")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.token") ?: System.getenv("TOKEN")
+            }
+        }
+    }
 }
