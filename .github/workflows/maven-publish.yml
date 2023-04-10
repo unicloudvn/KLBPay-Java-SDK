@@ -19,4 +19,4 @@ jobs:
         with:
           arguments: publish
         env:
-          GITHUB_TOKEN: ${{ secrets.JAVA_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.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}}
