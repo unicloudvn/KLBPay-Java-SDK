@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class PaymentConfigurationProperties {
 
     @JsonProperty("host")
-    private String host = "http://example.com";
+    private String host = "https://example.com";
 
     @JsonProperty("client-id")
     private String clientId = "client-id";
