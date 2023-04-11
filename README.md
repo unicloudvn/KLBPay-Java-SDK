@@ -49,11 +49,20 @@ Sau đó kiểm tra External Libraies đã được cài đặt
 ### **Constants**
 
 ```java
-private String HOST = '<HOST_URL>'; //'https://api-staging.kienlongbank.co/pay'
-private String CLIENT_ID = '<YOUR_CLIENT_ID>';
-private String SECRET_KEY = '<YOUR_SECRET_KEY>';
-private String ENCRYPT_KEY = '<YOUR_ENCRYPT_KEY>';
-private String ACCEPT_TIME_DIFF = '<YOUR_ACCEPT_TIME_DIFF>';
+    @JsonProperty("host")
+    private String host = "https://example.com";
+
+    @JsonProperty("client-id")
+    private String clientId = '<HOST_URL>'; //'https://api-staging.kienlongbank.co/pay'
+
+    @JsonProperty("secret-key") 
+    private String secretKey = '<YOUR_CLIENT_ID>';
+
+    @JsonProperty("encrypt-key")
+    private String encryptKey = '<YOUR_SECRET_KEY>';
+
+    @JsonProperty("accept-time-diff")
+    private long acceptTimeDiff = '<YOUR_ACCEPT_TIME_DIFF>';
 ```
 
 ### **Configure**
