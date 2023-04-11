@@ -45,6 +45,9 @@ dependencies{
         implementation'vn.unicloud:payment-sdk:1.0.3'
 }
 ```
+
+Chạy Gradle Build
+
 Sau đó kiểm tra External Libraies đã được cài đặt
 
 ![img.png](images/img.png)
