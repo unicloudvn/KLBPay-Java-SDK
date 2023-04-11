@@ -65,7 +65,6 @@ Sau đó kiểm tra External Libraies đã được cài đặt
     private long acceptTimeDiff = '<YOUR_ACCEPT_TIME_DIFF>';
 ```
 
-### **Callback thanh toán** (Webhook):
 ## **Author**
 
 [dev@unicloud.com.vn]()
