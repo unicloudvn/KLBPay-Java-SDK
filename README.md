@@ -53,16 +53,16 @@ Sau đó kiểm tra External Libraies đã được cài đặt
 
 ```java
     @JsonProperty("host")
-    private String host = "https://example.com";
+    private String host = "https://example.com"; //'https://api-staging.kienlongbank.co/pay'
 
     @JsonProperty("client-id")
-    private String clientId = '<HOST_URL>'; //'https://api-staging.kienlongbank.co/pay'
+    private String clientId = '<YOUR_CLIENT_ID>'; 
 
     @JsonProperty("secret-key") 
-    private String secretKey = '<YOUR_CLIENT_ID>';
+    private String secretKey = '<YOUR_SECRET_KEY>';
 
     @JsonProperty("encrypt-key")
-    private String encryptKey = '<YOUR_SECRET_KEY>';
+    private String encryptKey = '<YOUR_ENCRYPT_KEY>';
 
     @JsonProperty("accept-time-diff")
     private long acceptTimeDiff = '<YOUR_ACCEPT_TIME_DIFF>';
