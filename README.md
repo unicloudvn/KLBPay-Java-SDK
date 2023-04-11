@@ -13,13 +13,6 @@ Github: [https://github.com/unicloudvn/KLBPay-Java-SDK.git](https://github.com/u
 Phiên bản Spring Boot Java: từ 2.7.4 trở lên.
 JDK 11
 Gradle 7.2
-
-### **Cài đặt thủ công:**
-
-Bước 1. Tải thư mục sdk vào dự án của bạn.
-
-Bước 2. cd đến vị trí thư mục composer.json của sdk. Chạy commandLine: `composer install`.
-
 ## **Cách sử dụng:**
 
 ### **Imports**
