@@ -10,7 +10,7 @@ Github: [https://github.com/unicloudvn/KLBPay-Java-SDK.git](https://github.com/u
 
 ### **Requirements**
 
-Phiên bản Spring Boot Java: từ 2.7.4+
+Spring Boot Java 2.7.4+
 
 JDK 11+
 
