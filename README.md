@@ -16,7 +16,70 @@ JDK 11+
 
 Gradle 7.2+
 
-## **Cách sử dụng:**
+## **Cách sử dụng:**### **Cài đặt thủ công:**
+
+Bước 1. Tải thư mục sdk vào dự án dưới dạng module
+![images/img1.png](images/img1.png)
+Bước 2. Cấu hình module payment-sdk trong file build.gradle
+```java
+        plugins {
+            id 'org.springframework.boot' version "${springBootVersion}"
+            id 'io.spring.dependency-management' version "${dependencyManagementVersion}"
+            id 'java'
+        }
+
+        group = 'vn.unicloud'
+        version = '0.0.1-SNAPSHOT'
+        sourceCompatibility = '11'
+        
+        repositories {
+            mavenCentral()
+        }
+
+        dependencies {
+            implementation 'org.springframework.boot:spring-boot-starter-web'
+            implementation 'org.springframework.boot:spring-boot-starter'
+            compileOnly 'org.projectlombok:lombok'
+            annotationProcessor 'org.projectlombok:lombok'
+             implementation 'commons-codec:commons-codec:1.15'
+             implementation 'com.google.code.gson:gson:2.10'
+        }
+        bootJar {
+            enabled = false
+        }
+```
+Bước 3: Cấu hình trong module của bạn trong build.gradle
+```java
+
+    plugins {
+        id 'org.springframework.boot' version "${springBootVersion}"
+        id 'io.spring.dependency-management' version "${dependencyManagementVersion}"
+        id 'java'
+}
+
+    group = 'your-group'
+    version = 'your-version'
+
+    repositories {
+    mavenCentral()
+}
+    bootJar {
+        enabled = false
+}
+    dependencies {
+        //implement module
+        implementation project(':payment-sdk')
+}
+```
+Bước3: trong thư mục root của bạn ta cấu hình file setting.gradle
+```java
+
+rootProject.name = 'firstdemo'
+include 'payment-sdk'
+include 'your-module'
+
+```
+Như vậy bạn đã có thể sử dụng thư viện SDK rồi
 
 ### **Imports**
 Thêm dòng dưới mavenCentral() để sử dụng GitHubs SDK packages
