@@ -1,0 +1,18 @@
+plugins {
+    id 'org.springframework.boot' version "${springBootVersion}"
+    id 'io.spring.dependency-management' version "${dependencyManagementVersion}"
+    id 'java'
+}
+
+group = 'vn.unicloud'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+bootJar {
+    enabled = false
+}
+dependencies {
+    implementation project(':payment-sdk')
+}

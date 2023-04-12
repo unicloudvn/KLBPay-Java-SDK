@@ -1,8 +1,5 @@
-pluginManagement {
-	repositories {
-		maven { url 'https://repo.spring.io/milestone' }
-		maven { url 'https://repo.spring.io/snapshot' }
-		gradlePluginPortal()
-	}
-}
-rootProject.name = 'payment-sdk'
+rootProject.name = 'firstdemo'
+include 'payment-sdk'
+include 'your-module'
+
+
