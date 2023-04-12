@@ -16,7 +16,9 @@ JDK 11+
 
 Gradle 7.2+
 
-## **Cách sử dụng:**### **Cài đặt thủ công:**
+## **Cách sử dụng:**
+
+### **Cài đặt thủ công:**
 
 Bước 1. Tải thư mục sdk vào dự án dưới dạng module
 
