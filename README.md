@@ -19,7 +19,9 @@ Gradle 7.2+
 ## **Cách sử dụng:**### **Cài đặt thủ công:**
 
 Bước 1. Tải thư mục sdk vào dự án dưới dạng module
-![images/img1.png](images/img1.png)
+
+![images/img1.png](images/img1.png)   
+
 Bước 2. Cấu hình module payment-sdk trong file build.gradle
 ```java
         plugins {
@@ -79,7 +81,7 @@ include 'payment-sdk'
 include 'your-module'
 
 ```
-Như vậy bạn đã có thể sử dụng thư viện SDK rồi
+Như vậy bạn đã có thể sử dụng thư viện SDK một cách thủ công rồi
 
 ### **Imports**
 Thêm dòng dưới mavenCentral() để sử dụng GitHubs SDK packages
