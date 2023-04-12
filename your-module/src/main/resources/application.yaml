@@ -1,0 +1,7 @@
+klb:
+  payment:
+    host: ${HOST:https://api-staging.kienlongbank.co/pay-mirror}
+    client-id: ${CLIENT_ID:1ea58d2f-e5b5-4077-96a8-a8c6174c08c0}
+    secret-key: ${SECRET_KEY:88gW4CncWrluRYgjzIx8+A63b2kvYgBmYwjx71mUESCP/ClskKBeyQPFN9DeU7wxhjnDE+Kj4ONKu5QTYj2hd+qd25yJrSfq+HqsPwGJCQNO/tnFN+uL5uujgk1RlfgBLepbdwGWnFltxf41b1wvj1ZhJtWrMecm3fbh5YlOjQmj6bVDhUUEtvxuOSRzzwV4jfiisWMIcIdrY0bz8JmcxgZm98y0ASrMVN9Ks6qBMn2OzizQQBAylP/UvyMEB6U1ANkOe/EYJucXYgvIQSkBvVNT3SuQMsQ2nYrncv48bCYdbVDyjn6Q8/5bDZcFFMc8YBAFoFhS/E64Egt7uR97xw==}
+    encrypt-key: ${ENCRYPT_KEY:AE9C7E90A918BBDB8E13DF296664A5399B81138B528CD70EF562696D6E1DDA1}
+    accept-time-diff: ${MAX_TIMESTAMP_DIFF_MS:1800}
