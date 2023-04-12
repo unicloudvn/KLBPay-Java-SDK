@@ -76,7 +76,7 @@ Bước 3: Cấu hình trong module của bạn trong build.gradle
         implementation project(':payment-sdk')
 }
 ```
-Bước3: trong thư mục root của bạn ta cấu hình file setting.gradle
+Bước 4: trong thư mục root của bạn ta cấu hình file setting.gradle
 ```java
 rootProject.name = 'firstdemo'
 include 'payment-sdk'
