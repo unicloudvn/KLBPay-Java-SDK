@@ -46,8 +46,8 @@ Bước 2. Cấu hình module payment-sdk trong file build.gradle
             implementation 'org.springframework.boot:spring-boot-starter'
             compileOnly 'org.projectlombok:lombok'
             annotationProcessor 'org.projectlombok:lombok'
-             implementation 'commons-codec:commons-codec:1.15'
-             implementation 'com.google.code.gson:gson:2.10'
+            implementation 'commons-codec:commons-codec:1.15'
+            implementation 'com.google.code.gson:gson:2.10'
         }
         bootJar {
             enabled = false
