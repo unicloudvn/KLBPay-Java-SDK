@@ -78,12 +78,21 @@ Bước 3: Cấu hình trong module của bạn trong build.gradle
 ```
 Bước3: trong thư mục root của bạn ta cấu hình file setting.gradle
 ```java
-
 rootProject.name = 'firstdemo'
 include 'payment-sdk'
 include 'your-module'
-
 ```
+và thư mục build.gradle
+
+```java
+subprojects {
+    ext {
+        springBootVersion = '2.7.4'
+        dependencyManagementVersion = '1.1.0'
+    }
+}
+```
+
 Như vậy bạn đã có thể sử dụng thư viện SDK một cách thủ công rồi
 
 ### **Imports**
