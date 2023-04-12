@@ -19,6 +19,7 @@ Gradle 7.2+
 ## **Cách sử dụng:**
 
 ### **Cài đặt thủ công:**
+Bạn có thể xem demo ở đây: [https://github.com/unicloudvn/KLBPay-Java-SDK/tree/demo](https://github.com/unicloudvn/KLBPay-Java-SDK/tree/demo)
 
 Bước 1. Tải thư mục sdk vào dự án dưới dạng module
 
