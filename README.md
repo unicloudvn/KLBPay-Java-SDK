@@ -66,7 +66,6 @@ public class DemoApplication {
 Chạy thử dự án
 URL thanh toán trả về Console
 ![img.png](img.png)
-Response sẽ trả về URL Thanh toán
 Copy URL vào trình duyệt Bấm vào để mở thanh toán 
 
 ### **Kiểm tra giao dịch** (tương tự):
