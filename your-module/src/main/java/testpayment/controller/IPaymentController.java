@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import vn.unicloud.sdk.payment.client.ResponseBase;
+import vn.unicloud.sdk.payment.transaction.request.CancelTransactionRequest;
 import vn.unicloud.sdk.payment.transaction.request.CreateTransactionRequest;
+import vn.unicloud.sdk.payment.transaction.request.QueryTransactionRequest;
 
 import javax.validation.Valid;
 
@@ -35,7 +37,7 @@ public interface IPaymentController {
     )
     @PostMapping(value = "/v1/check")
     ResponseEntity<ResponseBase<String>> checkTransaction(
-            @Valid @RequestBody CreateTransactionRequest request
+            @Valid @RequestBody QueryTransactionRequest request
     );
 
     @Operation(
@@ -44,7 +46,7 @@ public interface IPaymentController {
     )
     @PostMapping(value = "/v1/cancel")
     ResponseEntity<ResponseBase<String>> cancelTransaction(
-            @Valid @RequestBody CreateTransactionRequest request
+            @Valid @RequestBody CancelTransactionRequest request
 
     );
 

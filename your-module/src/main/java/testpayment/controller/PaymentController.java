@@ -9,7 +9,9 @@ import vn.unicloud.sdk.payment.KPayClient;
 import vn.unicloud.sdk.payment.client.ResponseBase;
 import vn.unicloud.sdk.payment.client.ThirdPartyClient;
 import vn.unicloud.sdk.payment.config.PaymentConfigurationProperties;
+import vn.unicloud.sdk.payment.transaction.request.CancelTransactionRequest;
 import vn.unicloud.sdk.payment.transaction.request.CreateTransactionRequest;
+import vn.unicloud.sdk.payment.transaction.request.QueryTransactionRequest;
 import vn.unicloud.sdk.payment.transaction.response.CreateTransactionResponse;
 
 
@@ -36,12 +38,13 @@ public class PaymentController implements IPaymentController {
 
 
     @Override
-    public ResponseEntity<ResponseBase<String>> checkTransaction(CreateTransactionRequest request) {
+    public ResponseEntity<ResponseBase<String>> checkTransaction(QueryTransactionRequest request) {
         return null;
     }
 
     @Override
-    public ResponseEntity<ResponseBase<String>> cancelTransaction(CreateTransactionRequest request) {
+    public ResponseEntity<ResponseBase<String>> cancelTransaction(CancelTransactionRequest request) {
+
         return null;
     }
 }
