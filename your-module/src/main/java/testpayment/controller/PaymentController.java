@@ -1,18 +1,19 @@
 package testpayment.controller;
 
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import vn.unicloud.sdk.payment.KPayClient;
-import vn.unicloud.sdk.payment.client.ResponseBase;
 import vn.unicloud.sdk.payment.client.ThirdPartyClient;
 import vn.unicloud.sdk.payment.config.PaymentConfigurationProperties;
 import vn.unicloud.sdk.payment.transaction.request.CancelTransactionRequest;
 import vn.unicloud.sdk.payment.transaction.request.CreateTransactionRequest;
 import vn.unicloud.sdk.payment.transaction.request.QueryTransactionRequest;
+import vn.unicloud.sdk.payment.transaction.response.CancelTransactionResponse;
 import vn.unicloud.sdk.payment.transaction.response.CreateTransactionResponse;
+import vn.unicloud.sdk.payment.transaction.response.QueryTransactionResponse;
 
 
 @RestController
@@ -25,6 +26,7 @@ public class PaymentController implements IPaymentController {
     ThirdPartyClient client = new ThirdPartyClient(restTemplate);
     PaymentConfigurationProperties properties = new PaymentConfigurationProperties();
 
+
     KPayClient kPayClient = new KPayClient(properties, client);
 
 
@@ -33,18 +35,22 @@ public class PaymentController implements IPaymentController {
 
         CreateTransactionResponse response = kPayClient.createTransaction(request);
 
-        return response.getUrl();
-    }
-
-
-    @Override
-    public ResponseEntity<ResponseBase<String>> checkTransaction(QueryTransactionRequest request) {
-        return null;
+        return " URL: " + response.getUrl() + " TransactionId: " + response.getTransactionId();
     }
 
     @Override
-    public ResponseEntity<ResponseBase<String>> cancelTransaction(CancelTransactionRequest request) {
+    public String checkTransaction(QueryTransactionRequest request) {
+        QueryTransactionResponse response = kPayClient.checkTransaction(request);
 
-        return null;
+        return " Status: " + response.getStatus() + " RefId: " + response.getRefTransactionId() + " Amount: " + response.getAmount();
     }
+
+    @Override
+    public String cancelTransaction(CancelTransactionRequest request) {
+        CancelTransactionResponse response = kPayClient.cancelTransaction(request);
+
+        return " Cancel Transaction: "+response.isSuccess();
+    }
+
+
 }

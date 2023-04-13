@@ -2,11 +2,9 @@ package testpayment.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import vn.unicloud.sdk.payment.client.ResponseBase;
 import vn.unicloud.sdk.payment.transaction.request.CancelTransactionRequest;
 import vn.unicloud.sdk.payment.transaction.request.CreateTransactionRequest;
 import vn.unicloud.sdk.payment.transaction.request.QueryTransactionRequest;
@@ -36,7 +34,7 @@ public interface IPaymentController {
             description = "- Kiểm tra trạng thái giao dịch, có thể trả về timeout hoặc thành công"
     )
     @PostMapping(value = "/v1/check")
-    ResponseEntity<ResponseBase<String>> checkTransaction(
+    String checkTransaction(
             @Valid @RequestBody QueryTransactionRequest request
     );
 
@@ -45,7 +43,7 @@ public interface IPaymentController {
             description = "- Huỷ giao dịch từ phía merchant"
     )
     @PostMapping(value = "/v1/cancel")
-    ResponseEntity<ResponseBase<String>> cancelTransaction(
+    String cancelTransaction(
             @Valid @RequestBody CancelTransactionRequest request
 
     );
