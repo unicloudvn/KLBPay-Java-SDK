@@ -132,6 +132,17 @@ Sau đó kiểm tra External Libraies đã được cài đặt
 ### **Constants**
 
 ```java
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
+
+@Data
+@Configuration
+@ConfigurationProperties(prefix = "klb.payment", ignoreUnknownFields = false)
+public class PaymentConfigurationProperties {
+
     @JsonProperty("host")
     private String host = "https://example.com"; //'https://api-staging.kienlongbank.co/pay'
 
