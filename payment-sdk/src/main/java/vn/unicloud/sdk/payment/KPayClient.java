@@ -33,6 +33,9 @@ public class KPayClient {
         this.host = configuration.getHost();
         this.client = client;
     }
+    public KPayPacker getKPayPacker() {
+        return kPayPacker;
+    }
 
     public <T> T execute(String path, Object request, Class<T> responseType) {
         PackedMessage packedRequest = this.kPayPacker.encode(request);
