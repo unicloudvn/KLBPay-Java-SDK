@@ -136,7 +136,7 @@ Copy URL vào trình duyệt Bấm vào để mở thanh toán
 ![img.png](img3.png)
 ### **Kiểm tra giao dịch** (tương tự):
 ```java
-QueryTransactionResponse response = kPayClient.queryTransaction(request);
+QueryTransactionResponse response = kPayClient.checkTransaction(request);
 ```
 
 ### **Hủy giao dịch** (tương tự):
