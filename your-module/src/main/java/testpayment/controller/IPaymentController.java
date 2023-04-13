@@ -11,7 +11,7 @@ import vn.unicloud.sdk.payment.transaction.request.CreateTransactionRequest;
 
 import javax.validation.Valid;
 
-@Tag(name = "Payment Controller", description = "Thao tác với Payment")
+@Tag(name = "Payment C  ontroller", description = "Thao tác với Payment")
 @RequestMapping(value = "/api/payment")
 public interface IPaymentController {
 

@@ -2,6 +2,11 @@
 ## **Ví dụ cơ bản**
 
 ### **Tạo giao dịch**:
+```java
+CreateTransactionResponse response = kPayClient.createTransaction(request);
+```
+
+
 Tạo Controller như sau
 ```java
 import io.swagger.v3.oas.annotations.Operation;
@@ -71,6 +76,13 @@ public class PaymentController implements IPaymentController {
 Chạy thử dự án
 http://localhost:8080/swagger-ui/index.html
 
+Giap diện API UI
+
+![img_1.png](images/img_1.png)
+
+Bấm vào phần Tạo giao dịch
+
+![img_2.png](images/img_2.png)
 Nhập json dưới đây để test giao dịch
 
 ```json
@@ -92,4 +104,22 @@ Nhập json dưới đây để test giao dịch
   "redirectAfter": 5,
   "bankAccountId": ""
 }
+```
+
+Bấm Excute 
+Response sẽ trả về URL Thanh toán
+![img.png](images/img.png)
+Copy URL vào trình duyệt Bấm vào để mở thanh toán 
+![img.png](img3.png)
+### **Kiểm tra giao dịch** (tương tự):
+```java
+QueryTransactionResponse response = kPayClient.queryTransaction(request);
+```
+
+### **Hủy giao dịch** (tương tự):
+
+```java
+CancelTransactionResponse response = kPayClient.cancelTransaction(request);
+
+
 ```

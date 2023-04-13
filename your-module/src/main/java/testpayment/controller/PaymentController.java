@@ -1,6 +1,5 @@
 package testpayment.controller;
 
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +22,6 @@ public class PaymentController implements IPaymentController {
     RestTemplate restTemplate = new RestTemplate();
     ThirdPartyClient client = new ThirdPartyClient(restTemplate);
     PaymentConfigurationProperties properties = new PaymentConfigurationProperties();
-
 
     KPayClient kPayClient = new KPayClient(properties, client);
 
