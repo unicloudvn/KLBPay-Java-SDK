@@ -34,10 +34,6 @@ public class KPayClient {
         this.client = client;
     }
 
-    public KPayPacker getKPayPacker() {
-        return kPayPacker;
-    }
-
     public <T> T execute(String path, Object request, Class<T> responseType) {
         PackedMessage packedRequest = this.kPayPacker.encode(request);
         PackedMessage packedResponse = client.callAPI(this.host, path, packedRequest);

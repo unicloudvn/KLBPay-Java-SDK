@@ -32,6 +32,6 @@ public class CreateTransactionRequest {
 
     private Integer redirectAfter;
 
-    private String bankAccountId;
+    private String bankAccountNo;
 
 }
