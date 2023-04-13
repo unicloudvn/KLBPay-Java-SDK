@@ -65,9 +65,9 @@ public class DemoApplication {
 
 Chạy thử dự án
 URL thanh toán trả về Console
-![img.png](img.png)
+![img.png](images/img.png)
 Copy URL vào trình duyệt Bấm vào để mở thanh toán 
-
+![img_1.png](images/img_1.png)
 ### **Kiểm tra giao dịch** (tương tự):
 ```java
 QueryTransactionResponse response = kPayClient.checkTransaction(request);
