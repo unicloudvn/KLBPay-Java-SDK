@@ -68,3 +68,28 @@ public class PaymentController implements IPaymentController {
     }
 }
 ```
+Chạy thử dự án
+http://localhost:8080/swagger-ui/index.html
+
+Nhập json dưới đây để test giao dịch
+
+```json
+{
+  "refTransactionId": "626569",
+  "amount": 10000,
+  "description": "Noi dung thanh toan",
+  "timeout": 10000,
+  "title": "Thanh toán hóa đơn tiền điện",
+  "language": "VI",
+  "customerInfo": {
+    "fullName": "NGUYEN VAN XO",
+    "email": "xonv@klbpay.vn",
+    "phone": "0934998386",
+    "address": "22 Lang Ha"
+  },
+  "successUrl": "https://www.google.com/",
+  "failUrl": "https://dictionary.cambridge.org/vi/dictionary/english-vietnamese/fail",
+  "redirectAfter": 5,
+  "bankAccountId": ""
+}
+```
