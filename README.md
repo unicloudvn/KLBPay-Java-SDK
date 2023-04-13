@@ -24,6 +24,7 @@ public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
         
+        CreateTransactionRequest request = new CreateTransactionRequest();
         //Nhập dữ liệu input
         request.setRefTransactionId("212423235");
         request.setAmount(100000L);
@@ -45,13 +46,14 @@ public class DemoApplication {
         config.setClientId("84964d87-9846-4035-9dd6-f997f7933f41");
         config.setSecretKey("KP50qwbWF+rktXv6Gr+QuRHIBmrqWXke+Yuu2tFD/KVc9Xkj9FHeyx8sIWeG+WTU1I/kMrZJz9NbUCgxrYbDLoUD+tTtyybdfR9Vzo3CGrG+lLoiUixiRdez2zD+UL0lpi48HGz+WJ42ilIO+B8ZkUdKYY71bUqik1Sa/ygm9obLKaye/GsQq4/88HIOAkjWwMJH24N+5Kp1KELZx99FHd84FdvILX2sphfT5IEw3vOJxAglqDHXIjN0neRrVdoBKbnBUs8FqzLuFOE0e216eQqHs7pFQI15yauSqI+DAgS2Fx0ZA2Lchn5193NYpuHmpIy8qTGJebm4v9rF9/NsEg==");
         config.setEncryptKey("CA51E201A56FFA44DC3D7C22A00724BD51FFEFD53F57963B1D925E65012BAE94");
+        
         config.setAcceptTimeDiff(2000);
         
         RestTemplate restTemplate = new RestTemplate();
         ThirdPartyClient client = new ThirdPartyClient(restTemplate);
         KPayClient kPayClient = new KPayClient(config, client);
         //Khởi tạo Thanh Toán
-        CreateTransactionRequest request = new CreateTransactionRequest();
+        
         CreateTransactionResponse response = kPayClient.createTransaction(request);
         
         //In ra URL thanh toán
@@ -62,6 +64,8 @@ public class DemoApplication {
 ```
 
 Chạy thử dự án
+URL thanh toán trả về Console
+![img.png](img.png)
 Response sẽ trả về URL Thanh toán
 Copy URL vào trình duyệt Bấm vào để mở thanh toán 
 
