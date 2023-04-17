@@ -143,7 +143,7 @@ import org.springframework.context.annotation.Configuration;
 public class PaymentConfigurationProperties {
 
     @JsonProperty("host")
-    private String host = "https://example.com"; //'https://api-staging.kienlongbank.co/pay'
+    private String host = "https://example.com"; 
 
     @JsonProperty("client-id")
     private String clientId = '<YOUR_CLIENT_ID>'; 
