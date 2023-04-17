@@ -94,33 +94,6 @@ subprojects {
 
 Như vậy bạn đã có thể sử dụng thư viện SDK một cách thủ công rồi
 
-### **Imports**
-Thêm dòng dưới mavenCentral() để sử dụng GitHubs SDK packages
-```build.gradle
-    repositories{
-        mavenCentral()
-        maven{
-        name="GitHubPackages"
-        url=uri("https://maven.pkg.github.com/unicloudvn/KLBPay-Java-SDK")
-            credentials{
-                username=project.findProperty("user")?:System.getenv("USERNAME")
-                password=project.findProperty("token")?:System.getenv("TOKEN")
-            }
-        }
-    }
-```
-Thêm file gradle.properties vào project của bạn với nội dung
-
-```gradle.properties
-    user=hoangkhanhson2000 
-    token=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
-```
-implementation để sử dụng thư viện SDK
-```build.gradle
-dependencies{
-        implementation'vn.unicloud:payment-sdk:1.0.3'
-}
-```
 
 Chạy Gradle Build
 
