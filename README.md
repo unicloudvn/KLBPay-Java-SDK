@@ -128,7 +128,8 @@ public class PaymentConfigurationProperties {
     private String encryptKey = '<YOUR_ENCRYPT_KEY>';
 
     @JsonProperty("accept-time-diff")
-    private long acceptTimeDiff = '<YOUR_ACCEPT_TIME_DIFF>';}
+    private long acceptTimeDiff = '<YOUR_ACCEPT_TIME_DIFF>';
+}
 ```
 ## **Ví dụ cơ bản**
 Bạn có thể xem demo ở đây: [https://github.com/unicloudvn/KLBPay-Java-SDK/tree/demo](https://github.com/unicloudvn/KLBPay-Java-SDK/tree/demo)
