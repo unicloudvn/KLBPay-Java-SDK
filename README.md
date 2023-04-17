@@ -25,7 +25,7 @@ Bước 1. Tải thư mục src của sdk vào dự án dưới dạng module
 ![images/img1.png](images/img1.png)   
 
 Bước 2. Cấu hình module payment-sdk trong file build.gradle
-```java
+```build.gradle
         plugins {
             id 'org.springframework.boot' version "${springBootVersion}"
             id 'io.spring.dependency-management' version "${dependencyManagementVersion}"
@@ -83,7 +83,7 @@ include 'your-module'
 ```
 và thư mục build.gradle
 
-```java
+```build.gradle
 subprojects {
     ext {
         springBootVersion = '2.7.4'
@@ -126,7 +126,7 @@ Chạy Gradle Build
 
 Sau đó kiểm tra External Libraies đã được cài đặt
 
-![img.png](images/img.png)
+![img.png](images/imageimport.png)
 
 ### **Constants**
 
