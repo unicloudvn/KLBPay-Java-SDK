@@ -20,7 +20,7 @@ Gradle 7.2+
 
 ### **Cài đặt thủ công:**
 
-Bước 1. Tải thư mục sdk vào dự án dưới dạng module
+Bước 1. Tải thư mục src của sdk vào dự án dưới dạng module
 
 ![images/img1.png](images/img1.png)   
 
