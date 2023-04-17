@@ -53,7 +53,7 @@ Bước 2. Cấu hình module payment-sdk trong file build.gradle
         }
 ```
 Bước 3: Cấu hình trong module của bạn trong build.gradle
-```java
+```build.gradle
 
     plugins {
         id 'org.springframework.boot' version "${springBootVersion}"
@@ -76,7 +76,7 @@ Bước 3: Cấu hình trong module của bạn trong build.gradle
 }
 ```
 Bước 4: trong thư mục root của bạn ta cấu hình file setting.gradle
-```java
+```setting.gradle
 rootProject.name = 'firstdemo'
 include 'payment-sdk'
 include 'your-module'
@@ -96,7 +96,7 @@ Như vậy bạn đã có thể sử dụng thư viện SDK một cách thủ c�
 
 ### **Imports**
 Thêm dòng dưới mavenCentral() để sử dụng GitHubs SDK packages
-```java
+```build.gradle
     repositories{
         mavenCentral()
         maven{
@@ -111,12 +111,12 @@ Thêm dòng dưới mavenCentral() để sử dụng GitHubs SDK packages
 ```
 Thêm file gradle.properties vào project của bạn với nội dung
 
-```java
+```gradle.properties
     user=hoangkhanhson2000 
     token=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
 ```
 implementation để sử dụng thư viện SDK
-```java
+```build.gradle
 dependencies{
         implementation'vn.unicloud:payment-sdk:1.0.3'
 }
