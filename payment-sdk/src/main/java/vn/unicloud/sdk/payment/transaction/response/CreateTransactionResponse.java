@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import vn.unicloud.sdk.payment.transaction.model.*;
+import vn.unicloud.sdk.payment.transaction.model.TransactionStatus;
 
 @Data
 @AllArgsConstructor
@@ -33,5 +33,8 @@ public class CreateTransactionResponse {
     private TransactionStatus status;
 
     private String time;
+
+    private String accountName;
+
 
 }

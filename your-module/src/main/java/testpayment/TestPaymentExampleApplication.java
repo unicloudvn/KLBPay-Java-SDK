@@ -33,10 +33,10 @@ public class TestPaymentExampleApplication {
         PaymentConfigurationProperties config = new PaymentConfigurationProperties();
 
         //Cấu Hình Credential
-        config.setHost("https://api-staging.kienlongbank.co/pay-mirror");
-        config.setClientId("84964d87-9846-4035-9dd6-f997f7933f41");
-        config.setSecretKey("KP50qwbWF+rktXv6Gr+QuRHIBmrqWXke+Yuu2tFD/KVc9Xkj9FHeyx8sIWeG+WTU1I/kMrZJz9NbUCgxrYbDLoUD+tTtyybdfR9Vzo3CGrG+lLoiUixiRdez2zD+UL0lpi48HGz+WJ42ilIO+B8ZkUdKYY71bUqik1Sa/ygm9obLKaye/GsQq4/88HIOAkjWwMJH24N+5Kp1KELZx99FHd84FdvILX2sphfT5IEw3vOJxAglqDHXIjN0neRrVdoBKbnBUs8FqzLuFOE0e216eQqHs7pFQI15yauSqI+DAgS2Fx0ZA2Lchn5193NYpuHmpIy8qTGJebm4v9rF9/NsEg==");
-        config.setEncryptKey("CA51E201A56FFA44DC3D7C22A00724BD51FFEFD53F57963B1D925E65012BAE94");
+        config.setHost("https://api-staging.kienlongbank.co/pay");
+        config.setClientId("542812e7-bf7a-4f1c-bb8b-84f5dabbd43f");
+        config.setSecretKey("boF/TDEKYKWnw9A09BvCLyKwdRQWFQfwB6b/aT66vNI0d7CyTK4b6O+Lw+7ar2y7pp11VNN5IwciGAsu/Z8webeh8bznsq+rCmjgAAB3MQlT6+5YD5mh1qYrSqTLzIMyGPPVJxN69eLHFP21NYFePrN1aM6JlLCUbjKO8uXEdTS8lOcDCZST44pCiRy5KKTCLtb/EIXgXtWL+jqgYEYFeLEx6MFklXNmpFePNwPlPANM5YSWsC8lWPxe6nHbP9FnNLbY6Sb8y+He93modWRlclAyXePKrmyZlDztZshNbpKHciWsrIei5lFlFhmsjx9NefdhVFz27+dVMeMRzck25A==");
+        config.setEncryptKey("929B573F2E8C948F814BFD031B6817DD4D3CD4EF0AE17375F8B2EAD7EF4447D3");
 
         config.setAcceptTimeDiff(2000);
 
