@@ -27,10 +27,10 @@ public class KPayPacker {
 
     @SneakyThrows
     public <T> T decode(
-        PackedMessage packedMessage,
-        Class<T> tClass) {
+            PackedMessage packedMessage,
+            Class<T> tClass) {
         if (packedMessage.getClientId() == null || !packedMessage.getClientId().equals(this.clientId)) {
-            throw new PaymentException(PayResponseCode.PAYMENT_INVALID_CLIENT_ID);
+            throw new PaymentException(PayResponseCode.PAYMENT_CLIENT_ID_INVALID);
         }
         // check timestamp
         long checkTime = System.currentTimeMillis() - packedMessage.getTimestamp();
@@ -41,8 +41,8 @@ public class KPayPacker {
         // check signature
         try {
             String signature = SecurityUtils.hmacEncode(
-                SecurityUtils.buildRawSignature(clientId, String.valueOf(packedMessage.getTimestamp()), packedMessage.getEncryptedData()),
-                secretKey
+                    SecurityUtils.buildRawSignature(clientId, String.valueOf(packedMessage.getTimestamp()), packedMessage.getEncryptedData()),
+                    secretKey
             );
             if (signature != null && signature.equals(packedMessage.getSignature())) {
                 // Decrypt Data
@@ -74,8 +74,8 @@ public class KPayPacker {
 
         //encrypt header validation
         String xApiValidate = SecurityUtils.hmacEncode(
-            SecurityUtils.buildRawSignature(clientId, String.valueOf(timestamp), encryptData),
-            secretKey
+                SecurityUtils.buildRawSignature(clientId, String.valueOf(timestamp), encryptData),
+                secretKey
         );
 
         return new PackedMessage(clientId, timestamp, xApiValidate, encryptData);
