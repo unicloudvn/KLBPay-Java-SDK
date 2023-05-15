@@ -17,7 +17,7 @@ public class TestPaymentExampleApplication {
         SpringApplication.run(TestPaymentExampleApplication.class, args);
         CreateTransactionRequest request = new CreateTransactionRequest();
 
-        request.setRefTransactionId("212423235");
+        request.setRefTransactionId("21242323");
         request.setAmount(100000L);
         request.setDescription("tratien");
         request.setTimeout(100000L);

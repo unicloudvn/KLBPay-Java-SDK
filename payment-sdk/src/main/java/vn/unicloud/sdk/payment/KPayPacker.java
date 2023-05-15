@@ -30,7 +30,7 @@ public class KPayPacker {
         PackedMessage packedMessage,
         Class<T> tClass) {
         if (packedMessage.getClientId() == null || !packedMessage.getClientId().equals(this.clientId)) {
-            throw new PaymentException(PayResponseCode.PAYMENT_INVALID_CLIENT_ID);
+            throw new PaymentException(PayResponseCode.PAYMENT_CLIENT_ID_INVALID);
         }
         // check timestamp
         long checkTime = System.currentTimeMillis() - packedMessage.getTimestamp();
