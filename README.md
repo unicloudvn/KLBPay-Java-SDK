@@ -17,7 +17,33 @@ JDK 11+
 Gradle 7.2+
 
 ## **Cách sử dụng:**
-
+### **Cài đặt import:**
+Bước 1. Thêm phần này ở file build.gradle
+```
+repositories {
+    mavenCentral()
+    maven {
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/unicloudvn/KLBPay-Java-SDK")
+        credentials {
+            username = project.findProperty("user") ?: System.getenv("USERNAME")
+            password = project.findProperty("token") ?: System.getenv("TOKEN")
+        }
+    }
+}
+```
+Bước 2. Tạo file gradle.properties có nội dung như sau
+```
+user=hoangkhanhson2000 
+token=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
+```
+Bước 3. Thêm dependencies và load lại gradle
+```
+dependencies {
+    implementation'vn.unicloud:payment-sdk:1.0.3'
+}
+```
+Như vậy đã sử dụng được SDK rồi
 ### **Cài đặt thủ công:**
 
 Bước 1. Tải thư mục src của sdk vào dự án dưới dạng module
